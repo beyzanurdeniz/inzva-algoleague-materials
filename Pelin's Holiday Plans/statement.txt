@@ -1,0 +1,20 @@
+There is a land called Live Long, ruled, of course, by Taylor Swift. In this land, people live for many hundreds of years. Nobody knows how, but they have cracked the code of immortality. Pelin is one of the most respected citizens in Live Long.
+Pelin and her boyfriend want to go on vacation. They have $N$ days, numbered from $1$ to $N$, during which they are both free. Each day has a joy point set previously and is only changed by major events.
+There are $M$ major events during their planning, and they have to find the maximum joy they can get from a vacation consisting of a continuous interval of days.
+Events labeled as $"mild"$ are minor, influencing only the joy of a single day—examples include weather changes or one-day celebrations like Valentine's Day.
+Events coded as $"major"$ are significant, impacting the joy across a range of days, such as earthquakes or festivals.
+An event marked with $"calc"$ is a calculation event, which requires Pelin to calculate and print the maximum joy point after the events occurred.
+Your job is to help them during the planning process. You need to calculate and print the max joy point at every $"calc"$ event.
+
+Input Format:
+* First line consists of three space-separated integers $N$, $M$, and $Q$ - number of days, number of change events, number of calculation events.
+* Second line consists of $N$ space-separated integers, where the $i^{th}$ integer denotes the joy point of the $i^{th}$ day.
+* Next $M+Q$ lines consist of the events - $mild$, changed day, added or removed joy point; $major$, start day, end day, added or removed joy point; or $calc$.
+
+Output Format:
+* Q lines consisting a single integer - the maximum joy point after the events occurred
+
+Input Constraints:
+* $1 \leq N \leq 10^5$
+* $1 \leq (M+Q) \leq 10^5$
+* $10^-5 \leq e_i \leq 10^5$ - $e_i$ is the joy point of the $i^{th}$ day
