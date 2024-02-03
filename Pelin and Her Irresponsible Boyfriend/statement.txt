@@ -1,5 +1,5 @@
 There is a land called Live Long, ruled, of course, by Taylor Swift. In this land, people live for many hundreds of years. Nobody knows how, but they have cracked the code of immortality. Pelin is one of the most respected citizens in Live Long.
-Pelin and her boyfriend want to go on vacation. Naturally, her boyfriend is a laid-back and easy-come, easy-go person, leaving all the planning to Pelin.
+Pelin and her boyfriend want to go on vacation. Her boyfriend is a laid-back and easy-come, easy-go person, naturally, leaving all the planning to Pelin.
 They have $N$ days, numbered from $1$ to $N$, during which they are both free. Each day has a joy point set previously and is only changed by major events.
 There are $M$ major events during their planning, and they have to find the maximum joy they can get from a vacation consisting of a continuous interval of days.
 Events labeled as $"mild"$ are minor, influencing only the joy of a single day—examples include weather changes or one-day celebrations like Valentine's Day.
