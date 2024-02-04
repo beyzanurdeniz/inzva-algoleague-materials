@@ -2,8 +2,6 @@
 using namespace std;
 #define int long long
 
-//TODO: fix lazy usage, implement range update
-
 #define ii pair<int, int>
 
 int inf = INT64_MAX;
@@ -15,7 +13,6 @@ struct Node {
     int prefixSegment;
     int suffixSegment;
     int maxSubArraySum;
-    int lazy;
 };
 
 int arr[x];
@@ -27,6 +24,7 @@ Node combine(Node l, Node r) {
     node.prefixSegment = max(l.prefixSegment, l.sumSegment + r.prefixSegment);
     node.suffixSegment = max(r.suffixSegment, r.sumSegment + l.suffixSegment);
     node.maxSubArraySum = max(max(l.maxSubArraySum, r.maxSubArraySum), l.suffixSegment + r.prefixSegment);
+
     return node;
 }
 
@@ -63,19 +61,36 @@ void update(int i, int l, int r, int pos, int val) {
 }
 
 Node query(int i, int l, int r, int a, int b) {
-    if (a > b) {
-        return makeNode(0);
+    Node res;
+    res = makeNode(INT64_MIN);
+    if (l > b || r < a) {
+        return res;
     }
-    if (l == a && r == b) {
+    if (l >= a && r <= b) {
         return tree[i];
     }
     int m = (l + r) / 2;
-    return combine(tree[2 * i], tree[2 * i + 1]);
+    if (a > m) {
+        return query(2 * i + 1, m + 1, r, a, b);
+    }
+    if (b <= m) {
+        return query(2 * i, l, m, a, b);
+    }
+    Node leftSub = query(2 * i, l, m, a, b);
+    Node rightSub = query(2 * i + 1, m + 1, r, a, b);
+    return combine(leftSub, rightSub);
+}
+
+void printTree(int n) {
+    for (int i = 1; i <= 2*n; i++) {
+        cout << tree[i].maxSubArraySum << " ";
+    }
+    cout << "\n";
 }
 
 int32_t main() {
-    // freopen("in.txt", "r", stdin);
-    // freopen("out.txt", "w", stdout);
+     freopen("in.txt", "r", stdin);
+     freopen("out.txt", "w", stdout);
     ios_base::sync_with_stdio(0);
     cin.tie(0);
 
@@ -85,14 +100,21 @@ int32_t main() {
         cin >> arr[i];
     }
     build(1, 1, n);
-    cout << query(1, 1, n, 1, n).maxSubArraySum << "\n";
+    printTree(n);
 
     while (q--) {
-        int ind, val;
-        cin >> ind >> val;
-        ind++;
-        update(1, 1, n, ind, val);
-        cout << query(1, 1, n, 1, n).maxSubArraySum << "\n";
+        char type;
+        cin >> type;
+        if (type == 'U') {
+            int pos, val;
+            cin >> pos >> val;
+            update(1, 1, n, pos, val);
+            printTree(n);
+        } else {
+            int l, r;
+            cin >> l >> r;
+            cout << query(1, 1, n, l, r).maxSubArraySum << "\n";
+        }
     }
 
     return 0;
