@@ -1,11 +1,11 @@
 There is a land called Live Long, ruled, of course, by Taylor Swift. In this land, people live for many hundreds of years. Nobody knows how, but they have cracked the code of immortality. Pelin is one of the most respected citizens in Live Long.
-Pelin and her boyfriend want to go on vacation. Her boyfriend is a laid-back and easy-come, easy-go person, naturally, leaving all the planning to Pelin.
-Their free days change very often. Each day has a joy point set previously and is only changed by major events.
+Pelin and her boyfriend want to go on vacation. Her boyfriend is a laid-back and easy-come, easy-go person, naturally, leaving all the planning to Pelin.Their free days change very often. Each day has a joy point set previously and is only changed by major events.
 There are $Q$ events during their planning, also their free days change often so every calculation is done for a different range of days. They have to find the maximum joy they can get from a vacation consisting of a continuous interval of days.
 Events are as follows:
-* $'U'$ $i$ $e$ - change the joy point of the $i^{th}$ day to $e$.
-* $'C'$ $a$ $b$ - calculate and print the maximum joy point during those days after the events occurred.
-Your job is to help them during the planning process. You need to calculate and print the max joy point at every $'C'$ event.
+* $U\ i\  e$ - change the joy point of the $i^{th}$ day to $e$.
+* $C\ a\ b$ - calculate and print the maximum joy point during those days after the events occurred.
+
+Your job is to help them during the planning process. You need to calculate and print the max joy point at every $C$ event.
 
 Input Format:
 * First line consists of three space-separated integers $N$, $Q$ - number of days, number of events.
