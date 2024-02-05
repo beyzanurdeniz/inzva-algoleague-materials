@@ -94,26 +94,24 @@ int32_t main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
 
-    int n, q;
-    cin >> n >> q;
-    for (int i = 1; i <= n; i++) {
+    int N, Q;
+    cin >> N >> Q;
+    for (int i = 1; i <= N; i++) {
         cin >> arr[i];
     }
-    build(1, 1, n);
-    printTree(n);
+    build(1, 1, N);
 
-    while (q--) {
+    while (Q--) {
         char type;
         cin >> type;
         if (type == 'U') {
-            int pos, val;
-            cin >> pos >> val;
-            update(1, 1, n, pos, val);
-            printTree(n);
+            int u, e;
+            cin >> u >> e;
+            update(1, 1, N, u, e);
         } else {
             int l, r;
             cin >> l >> r;
-            cout << query(1, 1, n, l, r).maxSubArraySum << "\n";
+            cout << query(1, 1, N, l, r).maxSubArraySum << "\n";
         }
     }
 
