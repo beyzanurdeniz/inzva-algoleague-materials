@@ -1,8 +1,0 @@
-//TODO: create statement
-
-
-//TODO: input format
-
-//TODO: output format
-
-//TODO: constraints
