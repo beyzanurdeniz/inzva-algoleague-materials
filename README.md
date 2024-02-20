@@ -7,6 +7,11 @@
   Topic: Segment Tree
   
   Difficulty: 6
+
+  <li><b>Lost Beyza:</b></li>
+  Topic: Shortest Path Algorithms
+  
+  Difficulty: 5
 </ul>
 
 <hr>
