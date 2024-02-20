@@ -1,0 +1,20 @@
+You have a long vacation ahead of you, and you're extremely excited because you've been working hard and are very tired. During your work, you've been purchasing some books to read during this vacation. You have $n$ books, each with distinct enjoyment points. However, you are a bit obsessive and have some quirky rules about arranging them on a shelf.
+You possess a list of enjoyment points for the books, but this list isn't organized according to the order of the books in the box. You begin from the top of the box and arrange the books on the shelf one by one.
+After organizing the shelf you will read them at the order you have arranged them from left to right. You want to read all books that have higher enjoyment points than the mean of all books' enjoyment points before all books that have less enjoyment points than the mean.
+Once a book is placed, its position cannot be changed. For instance, if you have placed books with enjoyment points $3$ and $2$ adjacent to each other, you cannot insert another book between them.
+You're interested in knowing how many different ways you can arrange the books on the shelf according to these rules, and also what the lexicographically largest arrangement would be.
+
+Since the number of ways can be very large, print the number of ways modulo $10^9 + 7$.
+
+
+Input Format
+First line contains an integer $n$ - number of books.
+Second line contains $n$ integers $a_1, a_2, \ldots, a_n$ - enjoyment points of the books.
+
+Output Format
+First line should contain the number of different ways you can arrange the books on the shelf according to these rules.
+Second line should contain $n$ integers - the lexicographically largest arrangement of the books.
+
+Constraints
+* $1 \le n \le 10^6$
+* $1 \le a_i \le 10^9$
