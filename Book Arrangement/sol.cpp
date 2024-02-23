@@ -23,13 +23,9 @@ int32_t main() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int t= 5;
-    int n = 4;
-    while(t--){
-
     //all variables
-    //int n;                  //number of points
-    //cin >> n;               //input
+    int n;                  //number of points
+    cin >> n;               //input
     int sm = 0;             //sum of the points
     vector<int> points(n);    //points from input
     deque<int> q;             //largest queue possible
@@ -136,6 +132,6 @@ int32_t main() {
         cout << q.front() << " ";
         q.pop_front();
     }
-    cout << endl;}
+    cout << endl;
     return 0;
 }
