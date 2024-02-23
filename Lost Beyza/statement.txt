@@ -1,5 +1,5 @@
 //TODO: create statement
-There is a labyrinth where you can move from section to section through doors. Each section has three doors: the first one leads to the current section minus one, the second one leads to the current section multiplied by three, and the last one leads to the current section plus four. There is only one exit at the section $m$. There is no door numbered smaller than $0$.
+There is a labyrinth where you can move from section to section through doors. Each section has three doors: the first one leads to the current section minus one, the second one leads to the current section multiplied by three, and the last one leads to the current section plus four. Luckily there is a fourth door at every even section that is free and reaches to the half of the current section. There is only one exit at the section $m$. There is no door numbered smaller than $0$.
 
 Beyza somehow found herself in the labyrinth and wants to get out. She looks around and sees that she is at section $n$. What is the minimum number of doors she needs to go through to get out of the labyrinth?
 
