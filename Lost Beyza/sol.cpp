@@ -3,18 +3,26 @@ using namespace std;
 #define int long long
 
 #define ii pair<int, int>
-const int N = 1e6 + 5;
+const int N = 2e5+3;
 
 int32_t main() {
     ios::sync_with_stdio(0);
     cin.tie(0);
     int n, m;
     cin >> n >> m;
-    vector<vector<int>> canGo(N);
+    vector<vector<int>> canGo(N, vector<int>(4, -1));
     for (int i = 0; i < N; i++) {
-        canGo[i] = {3 * i, i - 1, i + 4};
-        if(i %2 == 0){
-            canGo[i].push_back(i/2);
+        if(i-1 >= 0){
+            canGo[i][0] = i-1;
+        }
+        if(3*i <= N){
+            canGo[i][1] = 3*i;
+        }
+        if(i+4<=N){
+            canGo[i][2] = i+4;
+        }
+        if(i%2 == 0){
+            canGo[i][3] = i/2;
         }
     }
     priority_queue<ii, vector<ii>, greater<ii>> pq;
@@ -29,10 +37,7 @@ int32_t main() {
         int a1 = canGo[node][0];
         int a2 = canGo[node][1];
         int a3 = canGo[node][2];
-        int a4 = -1;
-        if(node % 2 == 0){
-            a4 = canGo[node][3];
-        }
+        int a4 = canGo[node][3];
         if(a1 >= 0 && a1<=N){
             if (dist[a1] > curr + 1) {
                 dist[a1] = curr + 1;
