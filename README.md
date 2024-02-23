@@ -9,9 +9,14 @@
   Difficulty: 6
 
   <li><b>Lost Beyza:</b></li>
-  Topic: Shortest Path Algorithms
+  Topic: Graph Algorithms
   
   Difficulty: 5
+
+  <li><b>Book Arrangement:</b></li>
+  Topic: Data Structures, Math
+  
+  Difficulty: 2
 </ul>
 
 <hr>
