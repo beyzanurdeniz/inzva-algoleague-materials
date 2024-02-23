@@ -13,6 +13,9 @@ int32_t main() {
     vector<vector<int>> canGo(N);
     for (int i = 0; i < N; i++) {
         canGo[i] = {3 * i, i - 1, i + 4};
+        if(i %2 == 0){
+            canGo[i].push_back(i/2);
+        }
     }
     priority_queue<ii, vector<ii>, greater<ii>> pq;
     vector<int> dist(N, 1e18);
@@ -26,6 +29,10 @@ int32_t main() {
         int a1 = canGo[node][0];
         int a2 = canGo[node][1];
         int a3 = canGo[node][2];
+        int a4 = -1;
+        if(node % 2 == 0){
+            a4 = canGo[node][3];
+        }
         if(a1 >= 0 && a1<=N){
             if (dist[a1] > curr + 1) {
                 dist[a1] = curr + 1;
@@ -42,6 +49,13 @@ int32_t main() {
             if (dist[a3] > curr + 1) {
                 dist[a3] = curr + 1;
                 pq.push({dist[a3], a3});
+            }
+        }
+
+        if(a4 >= 0 && a4<=N){
+            if (dist[a4] > curr) {
+                dist[a4] = curr;
+                pq.push({dist[a4], a4});
             }
         }
     }
