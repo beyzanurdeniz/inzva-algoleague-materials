@@ -2,3 +2,5 @@
 *iml
 *.out
 *.exe
+in.txt
+out.txt
