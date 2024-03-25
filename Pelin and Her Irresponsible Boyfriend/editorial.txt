@@ -1,8 +1,0 @@
-### COMPLEXITY
-$\mathcal{O}(N\cdot log(N) + Q\cdot log(N))$ where $N$ is the number of days, $Q$ is the number of events
-
-### HINT
-Look at the constraints, there is no way to pass a $\mathcal{O}(N^2)$ solution. Think about a data structure that makes  ***update*** and ***query*** faster. Also be sure to check all possible situations that maximum segment can come from.
-
-### EDITORIAL
-//TODO: write explanation
