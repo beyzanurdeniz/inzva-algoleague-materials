@@ -4,6 +4,10 @@ using namespace std;
 
 #define ii pair<int, int>
 
+/*
+Bölen sayılarını tutan bir map yapısı oluşturuyoruz.
+*/
+
 int32_t main() {
     freopen("in.txt", "r", stdin);
     freopen("out.txt", "w", stdout);
@@ -13,26 +17,35 @@ int32_t main() {
 
     int n, k;
     cin >> n >> k;
+    vector<int> a(n);
+    for (int &i : a)
+        cin >> i;
 
     unordered_map<int, int> mp;
-
     int ans = 0;
 
-    for (int i = 0; i < n; i++) {
-        cout << i << " ";
-        int tmp;
-        cin >> tmp;
-        if ((k % tmp) == 0) {
-            if (mp.find(tmp) == mp.end())
-                mp[tmp] = 1;
-            else
-                mp[tmp]++;
-            if (mp.find(k / tmp) != mp.end())
-                ans += mp[k / tmp];
+    for (int num : a) {
+        //eğer sayı sıfırsa hiçbir sayının böleni olamaz
+        if (num == 0) {
+            //eğer k sıfırsa ve hedef de sfırsa tüm sayılar hedef olabilir
+            if (k == 0) {
+                int zeroCount = count(a.begin(), a.end(), 0);
+                ans = zeroCount * n - zeroCount * (zeroCount + 1) / 2;
+                break;
+            }
+        } 
+        //eğer sayı sıfırdan farklıysa
+        else {
+            //sayı mapteyse cevaba ekliyoruz
+            if (mp.find(num) != mp.end()) {
+                ans += mp[num];
+            }
+            //sayıyı bölen sayıları mapte tutuyoruz
+            if (k % num == 0)
+                ++mp[k / num];
         }
     }
-
-    cout << ans << endl;
+    cout << ans << "\n";
 
     return 0;
 }
