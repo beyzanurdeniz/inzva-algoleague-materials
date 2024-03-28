@@ -1,0 +1,26 @@
+There is a land called Live Long, ruled, of course, by Taylor Swift. In this land, people live for many hundreds of years. Nobody knows how, but they have cracked the code of immortality.
+
+Pelin is one of the most respected citizens in Live Long. Pelin and her boyfriend want to go on vacation. Her boyfriend is a laid-back and easy-come, easy-go person; naturally, leaving all the planning to Pelin. Their free days change very often. Each day has a joy point set previously and is only changed by major events.
+
+There are $Q$ events during their planning, also their free days change often so every calculation is done for a different range of days. They have to find the maximum joy they can get from a vacation consisting of a continuous interval of days.
+
+Events are as follows:
+* $U\ u\  e$ — change the joy point of the $u^{th}$ day to $e$.
+* $C\ l\ r$ — calculate and print the maximum joy point during those days after the events occurred.
+
+Your job is to help them during the planning process. You need to calculate and print the max joy point at the given range for every $C$ event.
+
+### Input Format
+* First line consists of three space separated integers $N$, $Q$ — number of days, number of events.
+* Second line consists of $N$ space separated integers $e_i$ — $e_i$ denotes the joy point of the $i^{th}$ day.
+* Following $Q$ lines consists one character and two space seperated integers according to events described.
+
+### Output Format
+Lines consisting a single integer — the maximum joy point at ${l-r}$ range after the events occurred for each $C$ event.
+
+### Constraints
+* $1 \leq N \leq 10^5$
+* $1 \leq Q \leq 10^5$
+* $10^{-9} \leq e_i \leq 10^9 $
+* $1 \leq u \leq n $
+* $1 \leq l \leq r \leq n$
