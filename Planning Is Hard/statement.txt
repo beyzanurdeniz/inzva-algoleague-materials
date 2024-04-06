@@ -1,0 +1,13 @@
+Beyza and her boyfriend have lots of different date ideas, but they don't want to use them all up at once. They'd rather spread them out over several dates. Each idea on their list represents a different activity they want to do. For each daye, they need a minimum number of different activities to make it worth traveling. You're given a list of ideas $A$ with a length of $n$ and the minimum number of different activities $k$ needed. And since it coincides with their anniversary, they want it to be as long as possible. Your job is to figure out the maximum number of enjoyable dates they can have and the maximum length of the first one. Print `IPTAL` if it is not possible.
+
+### INPUT FORMAT
+First line includes two integers — the number of ideas and the minimum number of different activities needed.
+Second line includes $n$ integers — the ideas on their list.
+
+### OUTPUT FORMAT
+An integer representing the maximum number of enjoyable dates they can have.
+
+### CONSTRAINTS
+$1 \le n \le 10^6$
+$1 \le k \le n$
+$1 \le A_i \le 10^9$
