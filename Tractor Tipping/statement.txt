@@ -1,0 +1,12 @@
+Mater loves scaring the tractors at the farm at night, and because McQueen loves Mater, he always joins him. However, if they scare too many tractors, the entire herd wakes up and chases after them.
+
+<img src="https://i.ibb.co/f4k9F0q/tractor-tipping-by-darkmoonanimation-dfnsi6a-fullview.jpg" width="60%" style="display: block; margin-left: auto; margin-right: auto; border-radius:5px;">
+
+You are given a farm represented as follows:
+* `.` represents grass
+* `#` represents fences
+* `T` represents tractors
+* `A` represents their initial position
+
+Mater and McQueen can escape the farm through any grass tile on the edges of the farm. Tractors move optimally to catch them, but if Mater and McQueen encounter (i.e., share the same tile with) a tractor and wait for two moves, the tractor does not recognize them and moves on. 
+Your task is to find the number of minimum moves they can escape, if they can not print `-1`.
